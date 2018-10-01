@@ -10,16 +10,16 @@ script:
   - docker run shane88/react-test npm test -- --coverage
 
 after_success:
-  - docker build -t shane88/multi-client ./client
-  - docker build -t shane88/multi-nginx ./nginx
-  - docker build -t shane88/multi-server ./server
-  - docker build -t shane88/multi-worker ./worker
+  - docker build -t shane554/multi-client ./client
+  - docker build -t shane554/multi-nginx ./nginx
+  - docker build -t shane554/multi-server ./server
+  - docker build -t shane554/multi-worker ./worker
 
   # log into docker cli
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
   # take images and push to docker hub
-  - docker push shane88/multi-client
-  - docker push shane88/nginx
-  - docker push shane88/server
-  - docker push shane88/worker
+  - docker push shane554/multi-client
+  - docker push shane554/nginx
+  - docker push shane554/server
+  - docker push shane554/worker
