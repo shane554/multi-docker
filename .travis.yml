@@ -19,7 +19,7 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
   # take images and push to docker hub
-  - docker push shane554/multi-client
-  - docker push shane554/nginx
-  - docker push shane554/server
-  - docker push shane554/worker
+  - docker push shane88/multi-client
+  - docker push shane88/nginx
+  - docker push shane88/server
+  - docker push shane88/worker
